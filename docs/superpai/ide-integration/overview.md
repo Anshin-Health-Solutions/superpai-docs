@@ -56,7 +56,7 @@ graph LR
 
 | Requirement | Purpose | Notes |
 |-------------|---------|-------|
-| SuperPAI+ installed | Core platform | See [Installation](/superpai/implementation/installation) |
+| SuperPAI+ installed | Core platform | See [Installation](/docs/implementation/installation) |
 | superpai-server running | MCP backend | Required for all IDE integrations |
 | Bun 1.0+ | Server runtime | Needed to run MCP server |
 | IDE with MCP support | Client | Each IDE has its own MCP configuration |
@@ -97,10 +97,10 @@ graph LR
 
 See the individual IDE guides for step-by-step configuration:
 
-- [Claude Code CLI](/superpai/ide-integration/claude-code)
-- [Claude Desktop](/superpai/ide-integration/claude-desktop)
-- [VS Code](/superpai/ide-integration/vscode)
-- [Cursor](/superpai/ide-integration/cursor)
-- [Windsurf](/superpai/ide-integration/windsurf)
-- [Warp Terminal](/superpai/ide-integration/warp)
-- [Remote Server](/superpai/ide-integration/remote-server)
+- [Claude Code CLI](/docs/ide-integration/claude-code)
+- [Claude Desktop](/docs/ide-integration/claude-desktop)
+- [VS Code](/docs/ide-integration/vscode)
+- [Cursor](/docs/ide-integration/cursor)
+- [Windsurf](/docs/ide-integration/windsurf)
+- [Warp Terminal](/docs/ide-integration/warp)
+- [Remote Server](/docs/ide-integration/remote-server)

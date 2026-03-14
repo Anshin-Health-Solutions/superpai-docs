@@ -18,7 +18,7 @@ source ~/.bashrc
 
 # 2. Clone and install
 git clone https://gitlab.anshinhealth.net/engineering/superpai.git /opt/superpai
-cd /opt/superpai/superpai-server
+cd /opt/docs/superpai-server
 bun install
 bun run db:migrate
 
@@ -34,7 +34,7 @@ bun run start
 
 ## .env Configuration
 
-Create `/opt/superpai/superpai-server/.env`:
+Create `/opt/docs/superpai-server/.env`:
 
 ```bash
 # Server
@@ -43,7 +43,7 @@ HOST=0.0.0.0
 NODE_ENV=production
 
 # Database
-DB_PATH=/opt/superpai/superpai-server/data/superpai.db
+DB_PATH=/opt/docs/superpai-server/data/superpai.db
 
 # MCP
 MCP_TRANSPORT=http
@@ -51,7 +51,7 @@ MCP_AUTH_ENABLED=true
 
 # Logging
 LOG_LEVEL=info
-LOG_FILE=/var/log/superpai/server.log
+LOG_FILE=/var/log/docs/server.log
 
 # Voice (optional)
 VOICE_URL=http://localhost:8888
@@ -76,22 +76,22 @@ Documentation=https://docs.anshintech.net/superpai
 Type=simple
 User=superpai
 Group=superpai
-WorkingDirectory=/opt/superpai/superpai-server
-ExecStart=/home/superpai/.bun/bin/bun run start
+WorkingDirectory=/opt/docs/superpai-server
+ExecStart=/home/docs/.bun/bin/bun run start
 Restart=always
 RestartSec=5
 Environment=NODE_ENV=production
-EnvironmentFile=/opt/superpai/superpai-server/.env
+EnvironmentFile=/opt/docs/superpai-server/.env
 
 # Logging
-StandardOutput=append:/var/log/superpai/server.log
-StandardError=append:/var/log/superpai/error.log
+StandardOutput=append:/var/log/docs/server.log
+StandardError=append:/var/log/docs/error.log
 
 # Security hardening
 NoNewPrivileges=true
 ProtectSystem=strict
 ProtectHome=true
-ReadWritePaths=/opt/superpai/superpai-server/data
+ReadWritePaths=/opt/docs/superpai-server/data
 ReadWritePaths=/var/log/superpai
 
 [Install]
@@ -260,7 +260,7 @@ spec:
 
 ```bash
 # Generate API key for a team member
-cd /opt/superpai/superpai-server
+cd /opt/docs/superpai-server
 bun run keys:create --email user@anshintech.net --name "Developer Name"
 
 # List all keys
@@ -270,4 +270,4 @@ bun run keys:list
 bun run keys:revoke --email user@anshintech.net
 ```
 
-Team members configure their IDE with the provided API key. See the [IDE Integration](/superpai/ide-integration/overview) guides for per-IDE configuration.
+Team members configure their IDE with the provided API key. See the [IDE Integration](/docs/ide-integration/overview) guides for per-IDE configuration.

@@ -217,4 +217,4 @@ echo "{
 
 ## Creating Custom Hooks
 
-You can add custom hooks by registering them in `hooks.json`. See the [Custom Components](/superpai/implementation/custom-components) guide for the registration process and template.
+You can add custom hooks by registering them in `hooks.json`. See the [Custom Components](/docs/implementation/custom-components) guide for the registration process and template.

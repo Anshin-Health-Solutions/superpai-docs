@@ -167,4 +167,4 @@ Handoffs preserve context and the receiving agent is briefed on prior findings.
 
 ## Creating Custom Agents
 
-See the [Custom Components](/superpai/implementation/custom-components) guide for the complete agent creation template and registration process.
+See the [Custom Components](/docs/implementation/custom-components) guide for the complete agent creation template and registration process.

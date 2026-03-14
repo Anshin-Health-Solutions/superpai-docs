@@ -60,7 +60,7 @@ After installation, restart Claude Code and verify:
 # Health check - all components should show green
 /health
 
-# Version check - should show v3.7.0
+# Version check - should show v4.8.0
 /version
 
 # List all skills
@@ -75,7 +75,7 @@ After installation, restart Claude Code and verify:
 ```
 SuperPAI+ Health Check
 ======================
-Plugin:       OK (v3.7.0)
+Plugin:       OK (v4.8.0)
 Server:       OK (http://localhost:3271)
 Database:     OK (11 tables, 0 pending migrations)
 Voice:        OK (http://localhost:8888) or UNAVAILABLE
@@ -147,4 +147,4 @@ export SUPERPAI_PROFILE="standard"
 | Server not connecting | Start the server: `cd ~/.claude/SuperPAI/superpai-server && bun run start` |
 | Session not designated | Check environment variables and restart |
 
-See the [Troubleshooting](/superpai/user-guide/troubleshooting) guide for more solutions.
+See the [Troubleshooting](/docs/user-guide/troubleshooting) guide for more solutions.

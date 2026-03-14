@@ -1,123 +1,117 @@
 ---
-title: "What's New in SuperPAI+ v3.7.0"
-sidebar_label: "What's New in v3.7.0"
+title: "What's New in SuperPAI+ v4.8.0"
+sidebar_label: "What's New in v4.8.0"
 slug: /whats-new
 ---
 
-# What's New in SuperPAI+ v3.7.0
+# What's New in SuperPAI+ v4.8.0
 
-**Release Date:** March 2026 | **Codename:** GSD (Get Stuff Done)
+**Release Date:** March 2026 | **Codename:** PAI
 
-SuperPAI+ v3.7.0 is the largest feature release since the platform's inception. The GSD framework introduces spec-driven development, wave-based planning, model aliases, and atomic commits --- transforming how engineers interact with AI-assisted development.
+SuperPAI+ v4.8.0 is a major platform release introducing the PAI Algorithm, Agent Teams, a GUI installer, and PostgreSQL Tier 3 — elevating the plugin from a personal tool to a professional team platform.
 
 ---
 
 ## Headline Features
 
-### GSD Framework Integration
+### PAI Algorithm — Ideal State Criteria
 
-The GSD (Get Stuff Done) framework adds two powerful new commands that shift SuperPAI+ from reactive assistance to proactive, spec-driven engineering:
+The PAI (Personal AI) Algorithm introduces **Ideal State Criteria (ISC)** — a goal-anchored development methodology where every task is evaluated against a clearly defined ideal outcome. The algorithm runs in four phases:
 
-- **`/quick <task>`** --- Execute small, well-defined tasks in a single pass. No planning phase, no multi-step workflow. Just describe what you need and SuperPAI+ delivers it with an atomic commit.
-- **`/spec <feature>`** --- Generate a comprehensive specification document, break work into shipping waves, and execute each wave with full test coverage and atomic commits.
+- **Phase 1: Understand** — Parse the request and establish ISC
+- **Phase 2: Plan** — Design the approach against ISC
+- **Phase 3: Execute** — Implement with continuous ISC verification
+- **Phase 4: Verify** — Confirm the result meets ISC before closing
 
-### Wave-Based Planning
+This replaces ad-hoc task execution with a systematic, repeatable engineering process.
 
-Complex features are now decomposed into **waves** --- ordered groups of tasks that can be planned, reviewed, and shipped independently. Each wave produces:
+### Agent Teams — Parallel Multi-Agent Workflows
 
-- A Mermaid diagram showing the dependency graph
-- A checklist of deliverables
-- Automatic atomic commits per completed task
-- A summary report after all waves complete
+New `/agents` and `/coordinate` commands enable **agent team orchestration**:
 
-```mermaid
-graph LR
-    S["/spec feature"] --> W1["Wave 1: Foundation"]
-    S --> W2["Wave 2: Core Logic"]
-    S --> W3["Wave 3: Integration"]
-    W1 --> T1A["Task 1a"]
-    W1 --> T1B["Task 1b"]
-    W2 --> T2A["Task 2a"]
-    W2 --> T2B["Task 2b"]
-    W3 --> T3A["Task 3a"]
-    W3 --> T3B["Task 3b"]
-```
-
-### Model Aliases
-
-Instead of memorizing model IDs, v3.7.0 introduces three intuitive aliases:
-
-| Alias | Maps To | Best For |
-|-------|---------|----------|
-| `simple` | Claude Haiku | Quick lookups, formatting, simple edits |
-| `smart` | Claude Sonnet | Standard development, code review, testing |
-| `genius` | Claude Opus | Architecture decisions, complex debugging, refactoring |
-
-Use them anywhere a model is referenced: `/cost model=genius`, steering rules, hook profiles.
-
-### Atomic Commits
-
-Every completed task in a `/quick` or `/spec` workflow now generates an automatic conventional commit:
+- Spawn specialized sub-agents in parallel (Engineer, Architect, Designer, Pentester, etc.)
+- Coordinate results with a team leader agent
+- Each agent has domain expertise and focused tool access
+- Results are synthesized into a unified response
 
 ```
-feat(auth): add JWT token validation middleware
-
-- Validates token expiry and signature
-- Returns 401 for invalid/expired tokens
-- Adds rate limiting per API key
-
-Co-Authored-By: SuperPAI+ <superpai@anshintech.net>
+/agents "analyze this codebase for security vulnerabilities, performance issues, and architecture improvements"
 ```
 
-The commit message is generated from the task description and includes the appropriate conventional-commit prefix (`feat`, `fix`, `refactor`, `docs`, `test`, `chore`).
+### GUI Installer (Windows)
 
-### Spec-Driven Skill
+SuperPAI+ v4.8.0 ships with a one-click Windows installer (`SuperPAI-v4.8.0-setup.exe`) built with Tauri. The installer:
 
-A new built-in skill creates and maintains specification files in the `.planning/` directory:
+- Checks and installs all prerequisites automatically
+- Configures Claude Code integration
+- Sets up the local database and server
+- Provides a settings UI for ongoing configuration
 
-- **`.planning/spec-<feature>.md`** --- The full specification with requirements, constraints, and acceptance criteria
-- **`.planning/waves-<feature>.md`** --- The wave breakdown with task assignments and status tracking
-- **`.planning/decisions-<feature>.md`** --- Architectural Decision Records (ADRs) made during implementation
+### PostgreSQL Tier 3 — Remote Team Database
 
-These files persist across sessions, enabling multi-session feature development with full context.
+The new three-tier database architecture enables cross-machine team coordination:
+
+| Tier | Database | Purpose |
+|------|----------|---------|
+| T1 | SQLite (local) | Per-machine fast cache |
+| T2 | PostgreSQL (local) | Local coordinator |
+| T3 | PostgreSQL (remote) | Team-wide sync and shared memory |
 
 ---
 
-## New Steering Rules (40-42)
+## New Commands in v4.8.0
 
-Three new governance rules were added to the constitutional framework:
+| Command | Description |
+|---------|-------------|
+| `/agents` | Spawn and coordinate a team of specialized agents |
+| `/coordinate` | Coordinate parallel agent workstreams |
+| `/telos` | Define and track project purpose (Telos framework) |
+| `/worktree` | Manage git worktrees for parallel feature development |
+| `/story` | Generate user stories and acceptance criteria |
+| `/science` | Run experiments with hypothesis → test → conclusion workflow |
+| `/osint` | Open-source intelligence gathering |
+| `/recon` | Codebase reconnaissance and mapping |
+| `/red-team` | Adversarial testing and prompt injection defense |
+| `/council` | Multi-perspective decision analysis |
 
-| Rule | Name | Purpose |
-|------|------|---------|
-| 40 | Identity Anchor | Prevents prompt injection from overriding agent identity |
-| 41 | Safety Gate | Blocks destructive operations without explicit confirmation |
-| 42 | Spec Compliance | Ensures implementations match their specification documents |
+---
+
+## New Steering Rules (43-50+)
+
+Additional governance rules were added to the constitutional framework covering:
+- Agent team coordination boundaries
+- ISC compliance verification
+- Parallel session conflict resolution
+- Worktree isolation requirements
 
 ---
 
 ## Additional Improvements
 
-- **Hook profile tuning** --- Fine-grained control over which hooks fire in which profiles (minimal, standard, full)
-- **Cost tracking improvements** --- Real-time token usage displayed per-model with cumulative session totals
-- **Memory sync optimization** --- Reduced sync latency from 5s to under 1s for multi-session coordination
-- **MCP transport upgrade** --- HTTP Streamable transport now supported alongside stdio for remote deployments
+- **MCP Router** — Intelligent routing of tool calls based on skill context
+- **Context Monitor** — Real-time context window usage tracking with automatic compaction alerts
+- **Cost Dashboard** — Per-session and per-project cost breakdown with model comparison
+- **Auto-Triggers** — Hook-driven automatic skill activation based on file patterns
+- **Git Worktrees** — First-class support for isolated parallel development
 
 ---
 
 ## Upgrade Path
 
-Upgrading from v3.6.x is non-breaking:
-
 ```bash
+# Windows: Download and run the new installer
+# SuperPAI-v4.8.0-setup.exe
+
+# Manual upgrade (WSL/macOS/Linux):
 cd ~/.claude/SuperPAI
 git pull origin main
-cd superpai-server && bun install && bun run db:migrate
+cd superpai-server && bun install
 ```
 
-Restart Claude Code and verify with `/version`. See the [Upgrade Guide](/superpai/implementation/upgrade) for detailed instructions.
+Restart Claude Code after upgrading. Verify with `/version`.
 
 ---
 
 ## Breaking Changes
 
-**None.** v3.7.0 is fully backward-compatible with v3.6.x configurations, skills, commands, and agents. The GSD framework is purely additive.
+**None for core functionality.** The Tier 3 PostgreSQL remote database is optional — existing T1 SQLite setups continue to work unchanged.

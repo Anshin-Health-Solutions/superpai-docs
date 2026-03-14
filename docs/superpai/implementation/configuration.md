@@ -21,7 +21,7 @@ Settings are stored in the superpai-server database and can be modified via the 
 | `tdd.enforcement` | boolean | `true` | Enforce TDD (tests before code) |
 | `tdd.coverage_target` | number | `80` | Target test coverage percentage |
 | `voice.enabled` | boolean | `true` | Enable voice output |
-| `voice.url` | string | `http://localhost:8888` | Anna-Voice server URL |
+| `voice.url` | string | `http://localhost:8891` | Anna-Voice server URL |
 | `voice.default_voice` | string | `marcus_webb` | Default voice persona |
 | `voice.speak_on_completion` | boolean | `true` | Speak when tasks complete |
 | `voice.speak_on_error` | boolean | `true` | Speak when errors occur |
@@ -44,8 +44,8 @@ Settings are stored in the superpai-server database and can be modified via the 
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `SUPERPAI_SERVER_URL` | `http://localhost:3271` | Server URL |
-| `SUPERPAI_VOICE_URL` | `http://localhost:8888` | Anna-Voice URL |
+| `SUPERPAI_SERVER_URL` | `https://superpai.anshintech.dev` | Server URL |
+| `SUPERPAI_VOICE_URL` | `http://localhost:8891` | Anna-Voice URL |
 | `SUPERPAI_PROFILE` | `standard` | Hook profile |
 | `SUPERPAI_VOICE_ENABLED` | `true` | Enable voice |
 | `SUPERPAI_COST_TRACKING` | `true` | Enable cost tracking |
@@ -53,7 +53,7 @@ Settings are stored in the superpai-server database and can be modified via the 
 | `SUPERPAI_LOG_LEVEL` | `info` | Log level (debug/info/warn/error) |
 | `SUPERPAI_MCP_TRANSPORT` | `stdio` | MCP transport mode (stdio/http) |
 | `SUPERPAI_MCP_AUTH` | `false` | Enable MCP authentication |
-| `SUPERPAI_API_KEY` | N/A | API key for remote server auth |
+| `SUPERPAI_API_KEY` | N/A | API key for authenticating to remote superpai-server |
 | `ANTHROPIC_API_KEY` | N/A | Anthropic API key for Claude |
 
 Environment variables override database settings. Set them in your shell profile for persistence.

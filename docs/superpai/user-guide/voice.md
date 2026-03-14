@@ -140,7 +140,7 @@ In your SuperPAI+ configuration:
 
 ### Per-Agent Voice Override
 
-You can override the default voice for any agent in the agent definition file. See the [Custom Components](/superpai/implementation/custom-components) guide.
+You can override the default voice for any agent in the agent definition file. See the [Custom Components](/docs/implementation/custom-components) guide.
 
 ---
 

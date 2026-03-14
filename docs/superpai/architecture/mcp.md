@@ -149,4 +149,4 @@ The MCP server is built with Bun and uses the same SQLite database as the main s
 
 ## Adding Custom MCP Tools
 
-Custom MCP tools can be registered by creating tool definitions in the `mcp/tools/` directory. See the [Custom Components](/superpai/implementation/custom-components) guide for details.
+Custom MCP tools can be registered by creating tool definitions in the `mcp/tools/` directory. See the [Custom Components](/docs/implementation/custom-components) guide for details.

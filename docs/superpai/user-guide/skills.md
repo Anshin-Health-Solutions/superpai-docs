@@ -111,7 +111,7 @@ Skills can chain together. For example, the `SpecDriven` skill may invoke `WaveP
 
 ## Creating Custom Skills
 
-You can create your own skills by adding a `SKILL.md` file and `skill-index.json` to the skills directory. See the [Custom Components](/superpai/implementation/custom-components) guide for the complete template and registration process.
+You can create your own skills by adding a `SKILL.md` file and `skill-index.json` to the skills directory. See the [Custom Components](/docs/implementation/custom-components) guide for the complete template and registration process.
 
 ### Minimal Skill Template
 

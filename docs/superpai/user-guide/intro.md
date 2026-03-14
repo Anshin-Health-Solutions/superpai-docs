@@ -11,7 +11,7 @@ Welcome to SuperPAI+, the personal AI infrastructure that transforms Claude Code
 
 ## What is SuperPAI+?
 
-SuperPAI+ is a Claude Code plugin that adds 73 skills, 47 commands, 16 agents, and 13 hooks to your AI development environment. It provides:
+SuperPAI+ is a Claude Code plugin that adds 80+ skills, 50 commands, 16 agents, and 20 hooks to your AI development environment. It provides:
 
 - **Adaptive Depth** --- Automatically adjusts effort level based on task complexity
 - **Test-Driven Development** --- Enforces TDD with tests written before implementation
@@ -74,7 +74,7 @@ Close and reopen your Claude Code terminal. The plugin loads automatically on st
 
 ```bash
 /health    # Should show all components green
-/version   # Should show v3.7.0
+/version   # Should show v4.8.0
 ```
 
 ---
@@ -101,7 +101,7 @@ The designation is used for multi-session coordination and appears in your promp
 ```bash
 /help              # See all available commands
 /status            # Check system status
-/skills            # List all 73 skills
+/skills            # List all 80+ skills
 ```
 
 ### Minute 3-4: Try Adaptive Depth
@@ -115,7 +115,7 @@ Ask a simple question --- SuperPAI+ uses DIRECT mode (instant answer). Then ask 
 /cost              # Check token usage and costs
 ```
 
-### Minute 7-8: Try GSD (v3.7.0)
+### Minute 7-8: Try GSD (v4.8.0)
 
 ```bash
 /quick "add a health check endpoint to the API"
@@ -148,7 +148,7 @@ When Claude Code launches with SuperPAI+, the following sequence executes:
 
 ## Next Steps
 
-- [Adaptive Depth System](/superpai/user-guide/adaptive-depth) --- Understand the three operating modes
-- [Slash Commands](/superpai/user-guide/commands) --- Reference for all 47 commands
-- [GSD Integration](/superpai/user-guide/gsd-integration) --- Deep dive into `/quick` and `/spec`
-- [Skills System](/superpai/user-guide/skills) --- Explore the 73 available skills
+- [Adaptive Depth System](/docs/user-guide/adaptive-depth) --- Understand the three operating modes
+- [Slash Commands](/docs/user-guide/commands) --- Reference for all 50 commands
+- [GSD Integration](/docs/user-guide/gsd-integration) --- Deep dive into `/quick` and `/spec`
+- [Skills System](/docs/user-guide/skills) --- Explore the 73 available skills

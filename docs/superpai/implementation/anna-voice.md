@@ -156,4 +156,4 @@ See the [Available Voices](/anna-voice/voices) reference for the complete catalo
 | Wrong voice used | Check agent voice assignments |
 | No microphone input | Check Windows audio permissions for Anna-Voice |
 
-See the [Troubleshooting](/superpai/user-guide/troubleshooting) guide for additional solutions.
+See the [Troubleshooting](/docs/user-guide/troubleshooting) guide for additional solutions.

@@ -129,4 +129,4 @@ Most commands accept optional flags:
 
 ## Custom Commands
 
-You can create custom commands by adding a command definition to your plugin configuration. See the [Custom Components](/superpai/implementation/custom-components) guide for details.
+You can create custom commands by adding a command definition to your plugin configuration. See the [Custom Components](/docs/implementation/custom-components) guide for details.

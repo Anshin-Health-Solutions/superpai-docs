@@ -151,7 +151,7 @@ For small tasks, the `/quick` command bypasses the full WORKFLOW ceremony:
 /quick "add input validation for email field on signup form"
 ```
 
-This still follows TDD when applicable but skips the planning and review phases for faster execution. See the [GSD Integration](/superpai/user-guide/gsd-integration) guide for details.
+This still follows TDD when applicable but skips the planning and review phases for faster execution. See the [GSD Integration](/docs/user-guide/gsd-integration) guide for details.
 
 ---
 

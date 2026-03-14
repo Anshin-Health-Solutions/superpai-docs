@@ -113,4 +113,4 @@ cd ~/.claude/SuperPAI && bash install.sh
 /version
 ```
 
-See the [User Guide](/superpai/user-guide/intro) for complete getting-started instructions.
+See the [User Guide](/docs/user-guide/intro) for complete getting-started instructions.

@@ -99,7 +99,7 @@ Agents can hand off work to other agents. For example:
 
 ## Agent Voices
 
-Each agent has an assigned Anna-Voice persona for spoken output. See the [Voice Integration](/superpai/user-guide/voice) guide for configuration details and the [Available Voices](/anna-voice/voices) reference for the full voice catalog.
+Each agent has an assigned Anna-Voice persona for spoken output. See the [Voice Integration](/docs/user-guide/voice) guide for configuration details and the [Available Voices](/anna-voice/voices) reference for the full voice catalog.
 
 | Agent | Default Voice | Accent |
 |-------|--------------|--------|
@@ -114,4 +114,4 @@ Each agent has an assigned Anna-Voice persona for spoken output. See the [Voice 
 
 ## Creating Custom Agents
 
-You can create custom agents by adding an agent definition file. See the [Custom Components](/superpai/implementation/custom-components) guide for the template and registration process.
+You can create custom agents by adding an agent definition file. See the [Custom Components](/docs/implementation/custom-components) guide for the template and registration process.

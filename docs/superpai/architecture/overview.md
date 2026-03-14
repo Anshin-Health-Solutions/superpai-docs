@@ -158,7 +158,7 @@ The superpai-server uses Bun runtime with the Hono web framework:
 
 ## Next Steps
 
-- [Plugin Core Architecture](/superpai/architecture/plugin-core) --- Deep dive into plugin.json and hooks.json
-- [Hook System](/superpai/architecture/hooks) --- All 13 hooks in detail
-- [Skills Architecture](/superpai/architecture/skills) --- How skills load and execute
-- [Server Architecture](/superpai/architecture/server) --- Bun + Hono + SQLite internals
+- [Plugin Core Architecture](/docs/architecture/plugin-core) --- Deep dive into plugin.json and hooks.json
+- [Hook System](/docs/architecture/hooks) --- All 13 hooks in detail
+- [Skills Architecture](/docs/architecture/skills) --- How skills load and execute
+- [Server Architecture](/docs/architecture/server) --- Bun + Hono + SQLite internals

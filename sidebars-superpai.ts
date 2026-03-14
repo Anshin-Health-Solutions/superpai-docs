@@ -2,7 +2,7 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
 const sidebars: SidebarsConfig = {
   superpaiSidebar: [
-    {type: 'doc', id: 'whats-new', label: "What's New in v3.7.0"},
+    {type: 'doc', id: 'whats-new', label: "What's New in v4.8.0"},
     {type: 'doc', id: 'marketing', label: 'Platform Overview'},
     {
       type: 'category',
