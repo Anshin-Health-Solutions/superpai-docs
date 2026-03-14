@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunksuperpai_docs=globalThis.webpackChunksuperpai_docs||[]).push([[8374],{23359(s){s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"superpai"}')}}]);
