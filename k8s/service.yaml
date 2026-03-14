@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: superpai-docs-svc
+  namespace: superpai-docs
+spec:
+  selector:
+    app: superpai-docs
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP

@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: superpai-docs-ingress
+  namespace: superpai-docs
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - docs.svcs.anshinhealth.net
+      secretName: wildcard-svcs-cert
+  rules:
+    - host: docs.svcs.anshinhealth.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: superpai-docs-svc
+                port:
+                  number: 80

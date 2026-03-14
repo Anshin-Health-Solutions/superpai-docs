@@ -1,0 +1,50 @@
+image: node:22
+
+stages:
+  - build
+  - deploy
+
+variables:
+  NODE_ENV: production
+
+cache:
+  paths:
+    - node_modules/
+
+build:
+  stage: build
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 hour
+  only:
+    - main
+    - dev
+
+deploy-dev:
+  stage: deploy
+  image: bitnami/kubectl:latest
+  script:
+    - kubectl apply -f k8s/
+    - kubectl set image deployment/superpai-docs superpai-docs=registry.anshinhealth.net/engineering/superpai-docs:$CI_COMMIT_SHA -n superpai-docs
+  only:
+    - dev
+  environment:
+    name: development
+    url: https://docs-dev.anshintech.net
+
+deploy-prod:
+  stage: deploy
+  image: bitnami/kubectl:latest
+  script:
+    - kubectl apply -f k8s/
+    - kubectl set image deployment/superpai-docs superpai-docs=registry.anshinhealth.net/engineering/superpai-docs:$CI_COMMIT_SHA -n superpai-docs-prod
+  only:
+    - main
+  when: manual
+  environment:
+    name: production
+    url: https://docs.anshintech.net
